@@ -1,22 +1,22 @@
 /// <reference path="./../../typings/tsd.d.ts" />
 
 import {Component, bootstrap, ElementRef} from 'angular2/angular2';
+import {VectorButton} from './VectorButton';
+
 
 @Component({
     selector: 'my-app',
-    template: '<h1>D3.js Integrated if background is yellow</h1>',
-    providers: [ElementRef]
+    directives: [VectorButton],
+    template: `
+        <h1>Vector Components:</h1>
+            <vector-button></vector-button>
+        `
 })
 class AppComponent { 
-    elementRef: ElementRef;
-    
-    constructor(elementRef: ElementRef) {
-        this.elementRef = elementRef;
+    constructor() {
+        
     }
     
-    afterViewInit(){
-        console.log("afterViewInit() called");
-        d3.select(this.elementRef.nativeElement).select("h1").style("background-color", "yellow");
-    }
+    
 }
 bootstrap(AppComponent);

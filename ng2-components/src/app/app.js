@@ -11,21 +11,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var angular2_1 = require('angular2/angular2');
+var VectorButton_1 = require('./VectorButton');
 var AppComponent = (function () {
-    function AppComponent(elementRef) {
-        this.elementRef = elementRef;
+    function AppComponent() {
     }
-    AppComponent.prototype.afterViewInit = function () {
-        console.log("afterViewInit() called");
-        d3.select(this.elementRef.nativeElement).select("h1").style("background-color", "yellow");
-    };
     AppComponent = __decorate([
         angular2_1.Component({
             selector: 'my-app',
-            template: '<h1>D3.js Integrated if background is yellow</h1>',
-            providers: [angular2_1.ElementRef]
+            directives: [VectorButton_1.VectorButton],
+            template: "\n        <h1>Vector Components:</h1>\n            <vector-button></vector-button>\n        "
         }), 
-        __metadata('design:paramtypes', [angular2_1.ElementRef])
+        __metadata('design:paramtypes', [])
     ], AppComponent);
     return AppComponent;
 })();
