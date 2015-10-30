@@ -20,12 +20,12 @@ export class VButtonDelegate extends VAbstractComponentDelegate{
         console.log("VButtonDelegate.Init Called");
         console.log("SVG Element: " + this.svg);
         let s = Snap(this.svg);
-        let bigCircle = s.circle(200, 200, 4);
+        /*let bigCircle = s.circle(200, 200, 4);
         bigCircle.attr({
             fill: "#bada55",
             stroke: "#000",
             strokeWidth: 5
         });
-        bigCircle.animate({r: 100}, 1000);
+        bigCircle.animate({r: 100}, 1000);*/
 	}
 }

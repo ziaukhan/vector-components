@@ -11,3 +11,6 @@ https://github.com/angular/angular/issues/4973
 https://docs.google.com/document/d/1M9FmT05Q6qpsjgvH1XvCm840yn2eWEg0PMskSQz7k4E/edit
 
 
+Must read:
+https://github.com/angular/angular/issues/4973
+
