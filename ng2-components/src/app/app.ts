@@ -1,15 +1,15 @@
 /// <reference path="./../../typings/tsd.d.ts" />
 
-import {Component, bootstrap, ElementRef} from 'angular2/angular2';
-import {VectorButton} from './VectorButton';
+import {Component, bootstrap } from 'angular2/angular2';
+import {VButton} from './VButton';
 
 
 @Component({
     selector: 'my-app',
-    directives: [VectorButton],
+    directives: [VButton],
     template: `
         <h1>Vector Components:</h1>
-            <vector-button></vector-button>
+            <vbutton></vbutton>
         `
 })
 class AppComponent { 

@@ -11,15 +11,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var angular2_1 = require('angular2/angular2');
-var VectorButton_1 = require('./VectorButton');
+var VButton_1 = require('./VButton');
 var AppComponent = (function () {
     function AppComponent() {
     }
     AppComponent = __decorate([
         angular2_1.Component({
             selector: 'my-app',
-            directives: [VectorButton_1.VectorButton],
-            template: "\n        <h1>Vector Components:</h1>\n            <vector-button></vector-button>\n        "
+            directives: [VButton_1.VButton],
+            template: "\n        <h1>Vector Components:</h1>\n            <vbutton></vbutton>\n        "
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
