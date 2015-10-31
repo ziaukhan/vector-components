@@ -19,11 +19,23 @@ var VButton = (function () {
         this.strokeWidth = 1;
         this.transparancy = 1;
         this.fill = "blue";
+        this.text = "Twitter";
         this.elementRef = elementRef;
         this.renderer = renderer;
+        this.textVisible = true;
+        this.textDisplay = "none";
     }
-    VButton.prototype.onClick = function () {
-        alert("hello");
+    VButton.prototype.showText = function () {
+    };
+    VButton.prototype.onToogle = function () {
+        if (this.textVisible) {
+            this.textVisible = false;
+            this.textDisplay = "true";
+        }
+        else {
+            this.textVisible = true;
+            this.textDisplay = "none";
+        }
     };
     VButton.prototype.afterViewInit = function () {
         console.log("afterViewInit() called");
@@ -40,7 +52,7 @@ var VButton = (function () {
         angular2_1.Component({
             selector: 'vbutton',
             inputs: ['radius', 'stroke', 'strokeWidth', 'transparancy', 'fill'],
-            template: "<div><svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" \n                    version=\"1.1\" height=\"500\" width=\"500\">\n                    \n                    <circle cx=\"100\" cy=\"100\" [attr.r]=\"radius\" [attr.stroke]=\"stroke\" [attr.stroke-width]=\"strokeWidth\" \n                        [attr.fill-opacity]=\"1-transparancy\" [attr.fill]=\"fill\" />\n                    \n                    </svg>\n                    <div>{{fill}}</div>\n               </div>\n                ",
+            template: "<div><svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" \n                    version=\"1.1\" height=\"500\" width=\"500\">\n                    <text x=\"80\" y=\"30\" fill=\"white\" [attr.display]=\"textDisplay\">{{text}}</text>\n                    <circle cx=\"100\" cy=\"100\" [attr.r]=\"radius\" [attr.stroke]=\"stroke\" [attr.stroke-width]=\"strokeWidth\" \n                        [attr.fill-opacity]=\"1-transparancy\" [attr.fill]=\"fill\" (mouseenter)='onToogle()' (mouseleave)='onToogle()' />\n                    \n                    </svg>\n                    <div>{{fill}}</div>\n               </div>\n                ",
             providers: [angular2_1.ElementRef],
             directives: [angular2_1.CORE_DIRECTIVES]
         }), 

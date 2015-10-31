@@ -6,7 +6,7 @@ export interface VButtonSettings extends VComponentSettings {
 	 
 	radius: number;
     stroke: string;
-    stokeWidth: number;
+    strokeWidth: number;
     transparancy: number;
     fill: string;
 }
