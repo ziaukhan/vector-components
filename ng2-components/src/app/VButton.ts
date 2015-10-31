@@ -12,9 +12,8 @@ import {VButtonSettings} from './VButtonSettings';
     template: `<div><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                     version="1.1" height="500" width="500">
                     
-
                     <circle cx="100" cy="100" [attr.r]="radius" [attr.stroke]="stroke" [attr.stroke-width]="strokeWidth" 
-                        [attr.fill-opacity]="transparancy - 1" [attr.fill]="fill" />
+                        [attr.fill-opacity]="1-transparancy" [attr.fill]="fill" />
                     
                     </svg>
                     <div>{{fill}}</div>
@@ -32,7 +31,7 @@ export class VButton implements AfterViewInit, VButtonSettings {
     
     public radius: number = 40;
     public stroke = "white";
-    public stokeWidth: number = 1;
+    public strokeWidth: number = 1;
     public transparancy: number = 1;
     public fill: string = "blue";
     

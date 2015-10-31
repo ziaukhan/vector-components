@@ -16,7 +16,7 @@ var VButton = (function () {
     function VButton(elementRef, renderer) {
         this.radius = 40;
         this.stroke = "white";
-        this.stokeWidth = 1;
+        this.strokeWidth = 1;
         this.transparancy = 1;
         this.fill = "blue";
         this.elementRef = elementRef;
@@ -40,7 +40,7 @@ var VButton = (function () {
         angular2_1.Component({
             selector: 'vbutton',
             inputs: ['radius', 'stroke', 'strokeWidth', 'transparancy', 'fill'],
-            template: "<div><svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" \n                    version=\"1.1\" height=\"500\" width=\"500\">\n                    \n\n                    <circle cx=\"100\" cy=\"100\" [attr.r]=\"radius\" [attr.stroke]=\"stroke\" [attr.stroke-width]=\"strokeWidth\" \n                        [attr.fill-opacity]=\"transparancy - 1\" [attr.fill]=\"fill\" />\n                    \n                    </svg>\n                    <div>{{fill}}</div>\n               </div>\n                ",
+            template: "<div><svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" \n                    version=\"1.1\" height=\"500\" width=\"500\">\n                    \n                    <circle cx=\"100\" cy=\"100\" [attr.r]=\"radius\" [attr.stroke]=\"stroke\" [attr.stroke-width]=\"strokeWidth\" \n                        [attr.fill-opacity]=\"1-transparancy\" [attr.fill]=\"fill\" />\n                    \n                    </svg>\n                    <div>{{fill}}</div>\n               </div>\n                ",
             providers: [angular2_1.ElementRef],
             directives: [angular2_1.CORE_DIRECTIVES]
         }), 
