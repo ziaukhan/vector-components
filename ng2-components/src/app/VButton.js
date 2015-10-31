@@ -52,7 +52,7 @@ var VButton = (function () {
         angular2_1.Component({
             selector: 'vbutton',
             inputs: ['radius', 'stroke', 'strokeWidth', 'transparancy', 'fill'],
-            template: "<div><svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" \n                    version=\"1.1\" height=\"500\" width=\"500\">\n                    <text x=\"80\" y=\"30\" fill=\"white\" [attr.display]=\"textDisplay\">{{text}}</text>\n                    <circle cx=\"100\" cy=\"100\" [attr.r]=\"radius\" [attr.stroke]=\"stroke\" [attr.stroke-width]=\"strokeWidth\" \n                        [attr.fill-opacity]=\"1-transparancy\" [attr.fill]=\"fill\" (mouseenter)='onToogle()' (mouseleave)='onToogle()' />\n                    \n                    </svg>\n                    <div>{{fill}}</div>\n               </div>\n                ",
+            template: "<div><svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" \n                    version=\"1.1\" height=\"10\" width=\"10\" style='overflow:visible;'>\n                    <text x=\"80\" y=\"30\" fill=\"white\" [attr.display]=\"textDisplay\">{{text}}</text>\n                    <circle cx=\"100\" cy=\"100\" [attr.r]=\"radius\" [attr.stroke]=\"stroke\" [attr.stroke-width]=\"strokeWidth\" \n                        [attr.fill-opacity]=\"1-transparancy\" [attr.fill]=\"fill\" (mouseenter)='onToogle()' (mouseleave)='onToogle()' />\n                    \n                    </svg>\n                    <div>{{fill}}</div>\n               </div>\n                ",
             providers: [angular2_1.ElementRef],
             directives: [angular2_1.CORE_DIRECTIVES]
         }), 

@@ -10,7 +10,7 @@ import {VButtonSettings} from './VButtonSettings';
     selector: 'vbutton',
     inputs: ['radius', 'stroke', 'strokeWidth', 'transparancy', 'fill'],
     template: `<div><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-                    version="1.1" height="500" width="500">
+                    version="1.1" height="10" width="10" style='overflow:visible;'>
                     <text x="80" y="30" fill="white" [attr.display]="textDisplay">{{text}}</text>
                     <circle cx="100" cy="100" [attr.r]="radius" [attr.stroke]="stroke" [attr.stroke-width]="strokeWidth" 
                         [attr.fill-opacity]="1-transparancy" [attr.fill]="fill" (mouseenter)='onToogle()' (mouseleave)='onToogle()' />
