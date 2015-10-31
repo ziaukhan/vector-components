@@ -19,7 +19,7 @@ var AppComponent = (function () {
         angular2_1.Component({
             selector: 'my-app',
             directives: [VButton_1.VButton],
-            template: "\n        <h1>Vector Components:</h1>\n            <vbutton></vbutton>\n        "
+            template: "\n        <h1>Vector Components:</h1>\n            <vbutton stroke='black' radius='60' stokeWidth='5' fill='red' ></vbutton>\n        "
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

@@ -14,6 +14,10 @@ var angular2_1 = require('angular2/angular2');
 var VButtonDelegate_1 = require('./VButtonDelegate');
 var VButton = (function () {
     function VButton(elementRef, renderer) {
+        this.radius = 40;
+        this.stroke = "white";
+        this.stokeWidth = 1;
+        this.transparancy = 1;
         this.fill = "blue";
         this.elementRef = elementRef;
         this.renderer = renderer;
@@ -35,7 +39,8 @@ var VButton = (function () {
     VButton = __decorate([
         angular2_1.Component({
             selector: 'vbutton',
-            template: "<div><svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" \n                    version=\"1.1\" height=\"500\" width=\"500\">\n                    <defs>\n                        <path id=\"myTextPath\" d=\"M 50,100 Q 150,50 250,100\" />\n                    </defs>\n\n                    <circle cx=\"100\" cy=\"100\" r=\"40\" stroke=\"white\" stroke-width=\"1\" fill-opacity=\"0\" />\n                    <text fill=\"steelblue\" font-size=\"20\">\n                        <textPath xlink:href=\"#myTextPath\">This is not showing in Alpha 45!</textPath>\n                     </text>\n                    </svg>\n                    <div>{{fill}}</div>\n               </div>\n                ",
+            inputs: ['radius', 'stroke', 'strokeWidth', 'transparancy', 'fill'],
+            template: "<div><svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" \n                    version=\"1.1\" height=\"500\" width=\"500\">\n                    \n\n                    <circle cx=\"100\" cy=\"100\" [attr.r]=\"radius\" [attr.stroke]=\"stroke\" [attr.stroke-width]=\"strokeWidth\" \n                        [attr.fill-opacity]=\"transparancy - 1\" [attr.fill]=\"fill\" />\n                    \n                    </svg>\n                    <div>{{fill}}</div>\n               </div>\n                ",
             providers: [angular2_1.ElementRef],
             directives: [angular2_1.CORE_DIRECTIVES]
         }), 

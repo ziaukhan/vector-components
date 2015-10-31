@@ -8,17 +8,14 @@ import {VButtonSettings} from './VButtonSettings';
 
 @Component({
     selector: 'vbutton',
-    
+    inputs: ['radius', 'stroke', 'strokeWidth', 'transparancy', 'fill'],
     template: `<div><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                     version="1.1" height="500" width="500">
-                    <defs>
-                        <path id="myTextPath" d="M 50,100 Q 150,50 250,100" />
-                    </defs>
+                    
 
-                    <circle cx="100" cy="100" r="40" stroke="white" stroke-width="1" fill-opacity="0" />
-                    <text fill="steelblue" font-size="20">
-                        <textPath xlink:href="#myTextPath">This is not showing in Alpha 45!</textPath>
-                     </text>
+                    <circle cx="100" cy="100" [attr.r]="radius" [attr.stroke]="stroke" [attr.stroke-width]="strokeWidth" 
+                        [attr.fill-opacity]="transparancy - 1" [attr.fill]="fill" />
+                    
                     </svg>
                     <div>{{fill}}</div>
                </div>
@@ -33,6 +30,10 @@ export class VButton implements AfterViewInit, VButtonSettings {
     
     rootElement: Node;
     
+    public radius: number = 40;
+    public stroke = "white";
+    public stokeWidth: number = 1;
+    public transparancy: number = 1;
     public fill: string = "blue";
     
     constructor(elementRef: ElementRef, renderer: Renderer) {

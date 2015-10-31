@@ -9,7 +9,7 @@ import {VButton} from './VButton';
     directives: [VButton],
     template: `
         <h1>Vector Components:</h1>
-            <vbutton></vbutton>
+            <vbutton stroke='black' radius='60' stokeWidth='5' fill='red' ></vbutton>
         `
 })
 class AppComponent { 
